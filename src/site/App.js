@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import About from './pages/about/About';
-import Index from './pages/index/Index';
-import Contact from './pages/contact/Contact';
-import Login from './pages/login/Login';
+import About from './pages/About/About';
+import Index from './pages/Index/Index';
+import Contact from './pages/Contact/Contact';
+import Login from './pages/Login/Login';
 import Footer from './components/Footer/Footer';
 import ReactGA from 'react-ga';
 import { Helmet } from "react-helmet";

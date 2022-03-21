@@ -1,0 +1,15 @@
+@import "../../../util/variables.scss";
+
+span.chip {
+    border: none;
+    background: $accent1;
+    font-size: 12px;
+    display: inline-block;
+    padding: 6px 15px;
+    margin: 2px;
+    color: $white;
+    border-radius: 50px;
+    &:focus {
+        outline: none;
+    }
+}

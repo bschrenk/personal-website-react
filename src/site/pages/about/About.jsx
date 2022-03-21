@@ -1,9 +1,25 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import Card from '../../components/Card/Card';
+import Chip from '../../components/Chip/Chip';
 import './About.scss';
 
 function About() {
+    const skills = [
+        "Web Development",
+        "Coding & Programming",
+        "Devops",
+        "SEO",
+        "Site Troubleshooting",
+        "UX/UI Design",
+        "Agile",
+        "Hosting",
+        "eCommerce Strategy",
+        "System Integrations",
+        "System Architecture",
+        "Platform Maintence",
+    ]
+
     return (
         <div className="main-content">
             <Helmet>
@@ -32,15 +48,14 @@ function About() {
             <div>
                 <h2>About Branden</h2>
                 <p>
-                    I graduated from Northern Kentucky University in 2015 with a Bachelors in Computer Information
-                    Technology. I have had many experiences in the technology field including Development,
-                    Reporting, Integrations, System Migrations, Devops, and Architecture to name a few.
+                    I graduated from Northern Kentucky University in 2015 with a Bachelor's in Computer Information Technology.
+                    Throughout my professional career, I have been sharpening my skills in the technology industry doing Frontend and Backend Web Development, Reporting, System Integrations, Cloud Migrations, Devops, Architecture and more.
                 </p>
                 <p>
-                    I have a proven track record of quickly learning, and adapting to new technologies.
-                    When faced with new challenges working as a team to create innovative solutions that accomplish the goals of the project.
-                    Effective communication of business requirements, and translating them to actionable
-                    features and tasks.
+                    I have a proven track record of quickly learning and adapting to new technologies.
+                    When faced with new challenges, working as a team to create innovative solutions that accomplish the goals of the project.
+                    I am able to effectively communicate with any business partner to gather requirements, and translate them into actionable features and tasks.
+                    I look forward to the opportunity to work as a team to solve any challenge.
                 </p>
                 <Card title={'Education'} barBox={'2011 - 2015'} barText={'Northern Kentucky University'}>
                     <p>BS Computer Information Technology</p>
@@ -49,18 +64,9 @@ function About() {
 
                 <h3>Areas of Expertise</h3>
                 <div className="tag">
-                    <span>Web Development</span>
-                    <span>Coding & Programming</span>
-                    <span>Devops</span>
-                    <span>SEO</span>
-                    <span>Site Troubleshooting</span>
-                    <span>UX/UI Design</span>
-                    <span>Agile</span>
-                    <span>Hosting</span>
-                    <span>eCommerce Strategy</span>
-                    <span>System Integrations</span>
-                    <span>System Architecture</span>
-                    <span>Platform Maintence</span>
+                    {skills.map((value) => (
+                        <Chip text={value} />
+                    ))}
                 </div>
             </div>
         </div>
