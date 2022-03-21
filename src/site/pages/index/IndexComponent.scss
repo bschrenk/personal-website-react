@@ -1,0 +1,36 @@
+@import "../../../util/variables";
+
+@media #{$mobile} {
+  div.page-wrapper .main-content-home {
+    width: unset !important;
+  }
+}
+
+.main-content-home {
+    h2{
+        color: white;
+        font-weight: 500;
+        font-size: 3rem;
+        margin: 0;
+        padding: 2rem;
+    }
+    p{
+        color: white;
+        font-weight: 100;
+        font-size: 1rem;
+        margin: 0rem;
+        padding: 1rem;
+    }
+    max-width: 1100px;
+    min-height: 500px;
+    width: 90%;
+    text-align: center;
+    display: block;
+    margin: 100px auto 0px auto;
+    padding: 15px 30px 30px 30px;
+    height: 100%;
+    background-image: url('../../../../public/banner-home.jpg');
+    padding-bottom: 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+    word-wrap: break-word;
+  }

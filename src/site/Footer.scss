@@ -1,0 +1,22 @@
+@import "../util/variables";
+
+@media #{$mobile} {
+}
+
+@media #{$tablet} {
+}
+
+@media #{$desktop} {
+}
+
+footer{
+  background-color: $white;
+  border-top: .2rem solid $accent2;
+  min-height: 100%;
+  padding: 2rem 5rem 2rem 5rem;
+}
+
+img{
+  width: 2rem;
+  margin-right: .5rem;
+}
