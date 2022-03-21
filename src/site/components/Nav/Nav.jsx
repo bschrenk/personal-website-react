@@ -14,7 +14,7 @@ function Nav() {
         <>
             <div className="main-nav" id="navbar">
                 <nav>
-                    <button className="icon" onClick={handleClick}>
+                    <button aria-label={"Navigation Menu"} className="icon" onClick={handleClick}>
                         <div className="toggle-nav btnn">
                             <div className="menu-bar"></div>
                             <div className="menu-bar"></div>
