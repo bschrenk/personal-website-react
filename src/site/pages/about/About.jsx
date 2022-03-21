@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-import './AboutComponent.scss';
+import Card from '../../components/Card/Card';
+import './About.scss';
 
 function About() {
     return (
@@ -18,6 +19,7 @@ function About() {
                 <meta property="og:image" content="https://www.schrenk.dev/android-chrome-192x192.png" />
                 <meta property="og:description" content="A page about Branden Schrenk experiances and accomplishments" />
 
+                {/* AboutPage SCHEMA */}
                 <script type="application/ld+json">{`
                 {
                     "@context": "https://schema.org",
@@ -40,14 +42,11 @@ function About() {
                     Effective communication of business requirements, and translating them to actionable
                     features and tasks.
                 </p>
-
-                <div className="cardOuter">
-                    <h3>Education</h3>
-                    <p className="cardDate">2011 - 2015</p>
-                    <h4 className="cardHead">Northern Kentucky University</h4>
+                <Card title={'Education'} barBox={'2011 - 2015'} barText={'Northern Kentucky University'}>
                     <p>BS Computer Information Technology</p>
                     <p>Minor in Business Informatics, Minor in Information Security</p>
-                </div>
+                </Card>
+
                 <h3>Areas of Expertise</h3>
                 <div className="tag">
                     <span>Web Development</span>
@@ -63,7 +62,6 @@ function About() {
                     <span>System Architecture</span>
                     <span>Platform Maintence</span>
                 </div>
-
             </div>
         </div>
     );

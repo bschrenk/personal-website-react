@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import About from './pages/about/AboutComponent';
-import Index from './pages/index/IndexComponent';
-import Contact from './pages/contact/ContactComponent';
-import Login from './pages/login/LoginComponent';
-import Footer from './Footer';
+import About from './pages/about/About';
+import Index from './pages/index/Index';
+import Contact from './pages/contact/Contact';
+import Login from './pages/login/Login';
+import Footer from './components/Footer/Footer';
 import ReactGA from 'react-ga';
 import { Helmet } from "react-helmet";
+import Nav from "./components/Nav/Nav";
 
 import './App.scss';
 
@@ -15,15 +16,7 @@ ReactGA.initialize('UA-61971155-2');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
-  const [isToggleOn] = useState(true);
 
-  const handleClick = () => {
-    if (!document.getElementById('mobile-nav').classList.contains("show-nav")) {
-      document.getElementById('mobile-nav').classList.add("show-nav")
-    } else {
-      document.getElementById('mobile-nav').classList.remove("show-nav")
-    }
-  }
   return (
     <div className="page-wrapper">
       <Helmet>
@@ -121,40 +114,8 @@ function App() {
             "url": "https://www.schrenk.dev/"
           }
         `}</script>
-
       </Helmet>
-      <div className="main-nav" id="navbar">
-        <nav>
-          <button className="icon" onClick={handleClick}>
-            <div className="toggle-nav btnn">
-              <div className="menu-bar"></div>
-              <div className="menu-bar"></div>
-              <div className="menu-bar"></div>
-            </div>
-          </button>
-          <div className="login-button">
-            <a href='/login'>
-              <button>Login</button>
-            </a>
-          </div>
-          <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/about'>About</a></li>
-            <li><a href='/contact'>Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <aside className="side-nav" id="mobile-nav" style={{ height: isToggleOn ? '0%' : '80%' }}>
-        <div id="site-canvas">
-          <div id="site-menu">
-            <ul>
-              <li><a href='/'>Home</a></li>
-              <li><a href='/about'>About</a></li>
-              <li><a href='/contact'>Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </aside>
+      <Nav />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="about" element={<About />} />

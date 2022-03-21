@@ -1,0 +1,22 @@
+@import "../../../util/variables.scss";
+
+.cardOuter {
+    background-color: $white;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    .cardDate {
+      color: $white;
+      margin: 0;
+      font-weight: 700;
+      padding: .8rem;
+      position: relative;
+      float: right;
+      background-color: $accent1;
+    }
+    .cardHead {
+      border-bottom: 5px solid $accent1;
+      margin: 0px;
+    }
+  }
+  

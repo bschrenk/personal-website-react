@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-import './IndexComponent.scss';
+import './Index.scss';
 
 function Index() {
     return (

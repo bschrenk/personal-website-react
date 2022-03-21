@@ -1,4 +1,4 @@
-@import "../util/variables";
+@import "../../../util/variables";
 
 @media #{$mobile} {
 }
@@ -9,14 +9,13 @@
 @media #{$desktop} {
 }
 
-footer{
+footer {
   background-color: $white;
-  border-top: .2rem solid $accent2;
+  border-top: 0.2rem solid $accent2;
   min-height: 100%;
   padding: 2rem 5rem 2rem 5rem;
-}
-
-img{
-  width: 2rem;
-  margin-right: .5rem;
+  img {
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
 }

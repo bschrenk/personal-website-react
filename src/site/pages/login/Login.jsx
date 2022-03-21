@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 
-import './LoginComponent.scss';
+import './Login.scss';
 
 function Login() {
     const [username, setUsername] = useState('');
