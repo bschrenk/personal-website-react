@@ -9,17 +9,21 @@
 .main-content-home {
     h2{
         color: $white;
-        font-weight: 500;
-        font-size: 3rem;
+        font-weight: 700;
+        font-size: 4rem;
         margin: 0;
         padding: 2rem;
     }
-    p{
+    h3{
         color: $white;
-        font-weight: 100;
-        font-size: 1rem;
+        font-weight: 300;
+        font-size: 2rem;
         margin: 0rem;
         padding: 1rem;
+        span{
+          color: $accent1;
+          background-color: $white;
+        }
     }
     max-width: 1100px;
     min-height: 500px;
