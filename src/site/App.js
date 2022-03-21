@@ -5,6 +5,7 @@ import About from './pages/about/About';
 import Index from './pages/index/Index';
 import Contact from './pages/contact/Contact';
 import Login from './pages/login/Login';
+import Projects from "./pages/projects/Projects";
 import Footer from './components/Footer/Footer';
 import ReactGA from 'react-ga';
 import { Helmet } from "react-helmet";
@@ -121,6 +122,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
+        <Route path="projects" element={<Projects />} />
       </Routes>
       <Footer />
     </div>

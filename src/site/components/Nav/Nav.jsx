@@ -3,12 +3,41 @@ import './Nav.scss';
 function Nav() {
     const [isToggleOn] = useState(true);
 
+    const links = [
+        {
+            link: '/',
+            name: 'Home'
+        },
+        {
+            link: '/about',
+            name: 'About'
+        },
+        {
+            link: '/projects',
+            name: 'Projects'
+        },
+        {
+            link: '/contact',
+            name: 'Contact'
+        }
+    ]
+    
     const handleClick = () => {
         if (!document.getElementById('mobile-nav').classList.contains("show-nav")) {
             document.getElementById('mobile-nav').classList.add("show-nav")
         } else {
             document.getElementById('mobile-nav').classList.remove("show-nav")
         }
+    }
+
+    const makeLinkList = () => {
+        return (
+            <ul>
+                {links.map((linkData) => (
+                    <li><a href={linkData.link}>{linkData.name}</a></li>
+                ))}
+            </ul>
+        )
     }
     return (
         <>
@@ -26,21 +55,13 @@ function Nav() {
                             <button>Login</button>
                         </a>
                     </div>
-                    <ul>
-                        <li><a href='/'>Home</a></li>
-                        <li><a href='/about'>About</a></li>
-                        <li><a href='/contact'>Contact</a></li>
-                    </ul>
+                    {makeLinkList()}
                 </nav>
             </div>
             <aside className="side-nav" id="mobile-nav" style={{ height: isToggleOn ? '0%' : '80%' }}>
                 <div id="site-canvas">
                     <div id="site-menu">
-                        <ul>
-                            <li><a href='/'>Home</a></li>
-                            <li><a href='/about'>About</a></li>
-                            <li><a href='/contact'>Contact</a></li>
-                        </ul>
+                        {makeLinkList()}
                     </div>
                 </div>
             </aside>
